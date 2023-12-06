@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        font-family: Arial;
+    }
+    body{
+        width:100vw;
+        height:100vh;
+        background-image: url(img/Fundo\ 2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        font-size: 30px;
+    }
+    #videoElement{
+        border: solid black 5px;
+        background:black;
+    }
+    .content{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width:850px;
+        gap:10px;
+    }
+    #bt1{
+        background-color: green;
+        width:400px;
+        height:100px;
+        color:white;
+        font-size: 30px;
+        border:none;
+        border-radius: 15px;
+    }
+    #bt2{
+        background-color: red;
+        width:400px;
+        height:100px;
+        color:white;
+        font-size: 30px;
+        border:none;
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <video id="videoElement" width="1500" height="1000" autoplay></video>
+    <div class="content">
+        <button id="bt1" onclick="startCamera()">Ligar a camera</button>
+        <button id="bt2" onclick="stopCamera()">Parar a camera</button>
+    </div>
+    <a href="login.html">Voltar a pagina anterior</a>
+    <script>
+        let videoStream;
+
+        async function startCamera(){
+            const videoElement = document.getElementById('videoElement');
+            try{
+                videoStream = await navigator.mediaDevices.getUserMedia({video:true});
+                videoElement.srcObject = videoStream;
+            }catch(error){
+                console.error('Erro ao abrir a camera🎥', erro);
+                alert('Erro ao abrir a camera🎥');
+            }
+        }
+
+        async function stopCamera(){
+            const videoElement = document.getElementById('videoElement');
+            if(videoStream){
+                const tracks = videoStream.getTracks();
+                tracks.forEach(track => track.stop());
+                    videoElement.srcObject = null;
+                }
+        }
+    </script>
+</body>
+</html>

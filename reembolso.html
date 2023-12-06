@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja NBB</title>
+    <link rel="icon" type="img" img href="img/LojaNBBsemfundo.png">
+    <link rel="stylesheet" href="Css/reembolso.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Cabeçalho-->
+    <div class="cabecalho">
+        <div class="logocabecalho">
+            <a href="http://127.0.0.1:5500/Projeto%20NBB/Index.html?#"><img id="logo"src="img/LojaNBBsemfundo.png"></a>
+        </div>
+        <!--barra de pesquisa-->
+        <div class="barradepesquisa">
+            <input class="bape" type="text">
+            <label id="barradepesquisa">Busque por produtos da NBB</label>
+            <button id="btnbusca">Pesquisar</button>
+        </div>
+        <!--entrar-->
+        <div class="entrar">
+          <img id="icons" src="img/sombra-de-usuario-masculino (1).png">
+          <!--menu-->
+          <div class="dropdown">
+              <button id="dropbtn">Entrar</button>
+              <div class="dropdown-content">
+                  <a href="http://127.0.0.1:5500/Projeto%20NBB/login.html">Login</a>
+                  <a href="http://127.0.0.1:5500/Projeto%20NBB/meuspedidos.html">Meus pedidos</a>
+                  <a href="http://127.0.0.1:5500/Projeto%20NBB/ajuda.html">Ajuda</a>
+              </div>
+          </div>
+        </div>
+        <!--carrinho-->
+        <a href="#"><img id="icons" src="img/carrinho-de-compras-de-design-xadrez (1).png"></a>
+    </div>
+    <!--menudecategorias-->
+    <div class="menudecategorias">
+       <a id="categoria" href="/Projeto NBB/regatas.html">Regatas</a>
+       <a id="categoria" href="/Projeto NBB/bermudas.html">Bermudas</a>
+       <a id="categoria" href="/Projeto NBB/tenis.html">Tênis</a>       
+       <a id="categoria" href="/Projeto NBB/infantil.html">Infantil</a>      
+       <a id="categoria" href="/Projeto NBB/ofertas.html">Ofertas</a>      
+    </div>
+    <!--conteudo-->
+    <div class="containerdois">
+        <div class="conteudocontainerdois">
+            <div class="itensajuda">
+                <a href="/Projeto NBB/ajuda.html" class="linktopicoajuda">Perguntas Frequentes</a>
+            </div>
+            <div class="itensajudaspecial">
+                <a href="/Projeto NBB/reembolso.html" class="linktopicoajuda">Reembolso e trocas</a>
+            </div>
+            <div class="itensajuda">
+                <a href="/Projeto NBB/quemsomosnos.html" class="linktopicoajuda">Quem somos nós?</a>
+            </div>
+            <div class="itensajuda">
+                <a href="/Projeto NBB/meusdados.html" class="linktopicoajuda">Meus dados</a>
+            </div>
+            <div class="itensajuda">
+                <a href="/Projeto NBB/formasdepagamento.html" class="linktopicoajuda">Formas de Pagamento</a>
+            </div>
+        </div>
+        <div class="contentajuda">
+            <!--referente a reembolsos e trocas-->
+            <h1>Reembolso e trocas</h1>
+            <textarea class="barradeperguntas" placeholder="   Procure por outras perguntas" type="text"></textarea>
+            <button class="pfbutton">Pesquisar</button>
+            <div class="contentpf">
+                   <details>
+                       <summary class="textpf">Como faço realizo o reembolso do meu produto comprado?</summary>
+                       <p class="textpf">- Você pode realizar o reembolso indo até a pagina <a href="/Projeto NBB/meuspedidos.html">meus pedidos</a>, escolhendo o pedido que deseja reeembolsar e clicando no botao reembolso, então as proximas etapas serão enviadas em seu email cadastrado no site.</p>
+                       <button class="reembolso">Reembolso</button>
+                   </details>
+                   <hr id="pf">
+                   <details>
+                        <summary class="textpf">Queria realizar a troca do meu produto e se passaram oito dias desde sua chegada, posso realizar a troca?</summary>
+                        <p class="textpf">- Você pode realizar o pedido de troca de seu produto em até 15 dias uteis após a chegada dele em sua residencia</p>
+                   </details>
+                   <hr id="pf">
+                   <details>
+                    <summary class="textpf">Minha regata não serviu, como realizo a troca?</summary>
+                        <p class="textpf">- Você pode realizar a troca de seu produto indo até a pagina <a href="/Projeto NBB/meuspedidos.html">meus pedidos</a>,(necessario <a href="/Projeto NBB/login.html">login</a>), escolhendo o pedido que deseja trocar e clicando no botao troca, então as proximas etapas serão enviadas em seu email cadastrado no site.</p>
+                        <button class="buttontroca">Troca</button>
+                   </details>
+                   <hr id="pf">
+                   <details>
+                    <summary class="textpf">Meu tenis veio sem cadarço e sem sola e se passaram 15 dias desde sua chegada, posso solicitar o reembolso?</summary>
+                        <p class="textpf">Sentimos muito por esse ocorrido, você pode solicitar o reembolso em até 30 dias uteis apos a chegada do produto, todavia levando em conta o ocorrido recomendamos que solicite a troca do seu produto, novamente pedimos desculpas !</p>
+                   </details>
+                   <hr id="pf">
+                   <details>
+                    <summary class="textpf">Não consigo realizar a troca do meu produto o email não chega o que faço</summary>
+                        <p class="textpf">Você pode ligar no suporte que está localizado no rodape da pagina e solicitar a troca via telefone</p>
+                   </details>
+                   <hr id="pf">
+                   <details>
+                    <summary class="textpf">Por quais motivos eu posso pedir a troca do produto?</summary>
+                        <p class="textpf">Você pode solicitar a troca do sue produto por este motivos:</p>
+                        <p class="textpf">- Defeito de fabrica;</p>
+                        <p class="textpf">- Não serviu;</p>
+                        <p class="textpf">- Veio com as personalização errada;</p>
+                        <p class="textpf">- Para mais informações solicite o suporte disponivel no rodape.</p>
+                   </details>
+            </div>
+        </div>
+    </div>
+        <!--rodape-->
+        <div class="rodape">
+              <form class="contentrodape">
+                 <label id="rodapelabel"><b>Receba ofertas e descontos exclusivos</b></label>
+                 <input id="inputrodape" type="email" placeholder="Digite seu email">
+                 <input id="checkbox" type="checkbox">Concordo em receber ofertas e novidades da Loja NBB por email
+                 <button id="rodapebutton">Enviar</button>
+              </form>
+        </div>
+        <!--rodape parte2-->
+        <div class="partetworodape">
+            <div class="primeirobloco">
+                <a id="rodapetxt" href="#"><b>Sobre nós</b></a>
+                <p id="rodapetxt" href="#"><b>Telefone: 19 99366-1042</b></p>
+                <p id="rodapetxt" href="#"><b>Email:gustavolopessdev@gmail.com</b></p>
+                <a id="rodapetxt" href="/Projeto NBB/ajuda.html"><b>Ajuda</b></a>
+            </div>
+            <div class="segundobloco">
+                <p id="tagprodape">Gustavo Lopes &reg</p>
+            </div>
+        </div>
+</body>
+</html>
